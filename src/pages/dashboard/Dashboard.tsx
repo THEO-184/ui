@@ -61,7 +61,10 @@ export function Dashboard() {
           {columns.map((card, id) => {
             const { title, amount, sold } = card;
             return (
-              <Card className="col-span-12 lg:col-span-4 py-3 px-5" key={id}>
+              <div
+                className="col-span-12 lg:col-span-4 lg:py-5 py-3 px-5 bg-white shadow"
+                key={id}
+              >
                 <h1 className="text-gray-800">{title}</h1>
                 <div className="flex flex-row justify-between my-1">
                   <div className="font-bold">{amount}</div>
@@ -72,7 +75,7 @@ export function Dashboard() {
                     </p>
                   </div>
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>
